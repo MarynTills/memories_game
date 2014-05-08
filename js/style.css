@@ -1,0 +1,441 @@
+
+/* import Font */
+
+@font-face {
+    font-family: a_font;
+    src: local(a_font), url('Yanone_Kaffeesatz/YanoneKaffeesatz-Regular.ttf') format('opentype');
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: 'Lato', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*end reset*/
+
+
+
+root { 
+    display: block;
+}
+
+body {
+	background-color: #fff;
+	
+}
+html, body {
+    height: 100%;
+}
+
+body article#game {
+
+	margin: 0 auto;
+	height: 100%;
+	width: 100%;
+}
+
+h2{
+
+}
+#title{
+	color:#91268f;
+	font-size:200%;
+	width:20%;
+	height:31.5%;
+	padding:0%;
+	float: left;
+	text-align:center;
+		background: #00adef;
+	}
+#hideboard{
+	display:none;
+}
+#showboard{
+	display:visible;
+}
+#board {
+
+	margin:1% auto;
+    width: 76%;
+    height:98%;
+	/*background-color: rgb(228, 223, 208);*/
+	float:right;
+	
+	
+}
+
+
+#startGameButton
+{
+	font-family: 'Lato', sans-serif;
+	font-size:200%;
+	color: rgb(20, 166, 0);
+	float:left;
+
+	/*background: #3db5e6;
+	background: -moz-linear-gradient(#389fca, #3db5e6);
+	background: -webkit-gradient(linear, left top, left bottom, from(#389fca), to(#3db5e6));
+	background: -webkit-linear-gradient(#389fca, #3db5e6);
+	background: -o-linear-gradient(#389fca, #3db5e6);
+	background: -ms-linear-gradient(#389fca, #3db5e6);
+	background: linear-gradient(#389fca, #3db5e6);
+*/
+	text-decoration: none;
+	color: #f8eaca;
+	text-shadow: 0 1px 0 rgba(86,78,60,.5);
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	width:90%;
+	padding:15% 5%;
+	margin:50% auto 10% auto ;
+	text-align:center;
+	position:relative;
+	bottom:0px;
+
+	
+
+}
+
+#startGameButton:hover {
+	outline: 0;
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(0,0,0,.2);
+	}
+
+#startGameButton:active {
+	-moz-box-shadow: 0 0 2px 2px rgba(242,139,0,.5) inset;
+	-webkit-box-shadow: 0 0 2px 2px rgba(242,139,0,.5) inset;
+	box-shadow: 0 0 2px 2px rgba(242,139,0,.5) inset;
+}
+
+
+.tile { /*Will need to do media query on sizing for different devices */
+	float:left;
+	margin: .5%;
+	border:1px solid #bababa;
+	cursor: pointer;
+	box-shadow:0 0 6px 1px #bababa;
+}
+
+.tile img {
+	display: block;
+	margin: 0 auto;	
+
+}
+
+.tileColor1 {
+	 background-color: #8cc63e;
+}
+
+.tileColor2 {
+	 background-color: #8cc63e;
+}
+
+.tileColor3 {
+	 background-color: #8cc63e;
+}
+
+.tileColor4 {
+	 background-color: #8cc63e;
+}
+
+
+.tileColor5 {
+	 background-color: #8cc63e;
+}
+
+.bottom_stuff {
+	float: left;
+}
+
+#selectlvl {
+	width: 100%;
+	font-size: 170%;
+	padding: 2% 4% 0 4%;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border:none;
+	border-radius:10px;
+    text-indent: 0.01px;
+    text-overflow: '';
+	margin:0 auto;
+	float:left;
+	/*line-height:.8;*/
+}
+/* label {position:relative}
+label:after {
+    content:'<>';
+    font:90px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}*/
+
+select {
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+
+
+
+
+/*
+label:after {
+
+    content:'<>';
+    font:200% "Consolas", monospace;
+    color:#aaa;
+	
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+
+    right:0px; top:0px; 
+    padding:10px 10px ;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;	
+	text-align:left;
+	margin: 0 0 20px -21px;
+	 
+}
+*/
+form{}
+
+
+#selectlvl option {
+	padding: 1%;
+}
+.arrow-up {
+	width: 0; 
+	height: 0; 
+	border-left: .8em solid transparent;
+	border-right: .8em solid transparent;
+	border-bottom: .8em solid #888;
+	margin:.45em  ;
+
+
+}
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: .8em solid transparent;
+	border-right: .8em solid transparent;
+	border-top: .8em solid #888;
+	margin:.45em ;
+}
+#arrows{
+position:relative;
+	float:right;
+	top:2.8em;
+	    pointer-events:none;
+		z-index:99;
+	
+}
+
+
+
+/*
+footer {
+	background: #00adef;
+	height: 200px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #ffd26e;
+	background: -moz-linear-gradient(#fac754, #ffd26e);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#ffd26e));
+	background: -webkit-linear-gradient(#fac754, #ffd26e);
+	background: -o-linear-gradient(#fac754, #ffd26e);
+	background: -ms-linear-gradient(#fac754, #ffd26e);
+	background: linear-gradient(#fac754, #ffd26e);
+
+}
+*/
+footer {
+	background: #00adef;
+	height: 60%;
+	width: 16%;
+	float:left;
+	position: relative;
+	padding:2% 2%;
+	bottom: 0px;
+	
+		font-family:Lato, sans-serif;
+
+
+}
+#startGameButton:hover {
+
+	background: #ffd26e;
+	background: -moz-linear-gradient(#fac754, #ffd26e);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#ffd26e));
+	background: -webkit-linear-gradient(#fac754, #ffd26e);
+	background: -o-linear-gradient(#fac754, #ffd26e);
+	background: -ms-linear-gradient(#fac754, #ffd26e);
+	background: linear-gradient(#fac754, #ffd26e);
+
+}
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.arrow-up {
+		width: 0; 
+		height: 0; 
+		border-left: .5em solid transparent;
+		border-right: .5em solid transparent;
+		border-bottom: .5em solid #888;
+			margin:.35em .45em;
+	}
+
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: .5em solid transparent;
+		border-right: .5em solid transparent;
+		border-top: .5em solid #888;
+		margin:.35em .45em;
+	}
+	#arrowbehind{
+		width:10px;
+		height:10px:
+		position: fixed;
+		top:0px;
+		right:0px;
+		background:green;
+		border-radius:10px;
+		z-index:99;
+	}
+	#arrows{
+			position:relative;
+			float:right;
+			top:2.1em;
+			pointer-events:none;
+			z-index:99;
+	}
+	#selectlvl{line-height:1;}
+	}
+
+
+
+@media all and (orientation: portrait) {
+	footer {
+		margin: 0 2.5%;
+		padding: 0;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 60%;
+		height: 20%;
+
+	}
+
+	#title {
+		margin: 0 auto;
+		padding: 0 50px;
+		position: absolute;
+		width: 30%;
+		left: 0;
+		bottom: 0;
+		height: 20%;
+	}
+
+	#startGameButton {
+		margin: 0;
+		padding: 35px;
+		width: 60%;
+		height:20%;
+		margin:1% auto;
+
+	}
+	form {
+		margin: 0 auto;
+		padding: 0;
+		width: 70%;
+		height:20%;
+
+	}
+	select{
+		padding:35px;
+		margin:0 auto;
+	}
+
+	#board {
+	background:blue;
+		width: 95%;
+		height: 70%;
+		margin:5% 0 0 5%;
+		float: left;
+	}
+	.tile{float:right;}
+}
+
+
