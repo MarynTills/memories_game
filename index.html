@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html manifest="manifest.php">
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>-->
+	<script src="jquery191.js"></script>
+	<script src="jquery192.js"></script>
+	<script src="js/tile.js"></script>
+	<script src="js/jquery.flip.js"></script>
+	<script src="js/matching.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css' />
+	<link rel="icon" 
+      type="image/png" 
+      href="mm_favi.png" />
+</head>
+<body onload="pagestart()">
+<div id="back">
+</div>
+	<article id="game">	
+		
+			
+		<section id="board" class="hideboard">
+		</section>
+		<div id="title">
+		<h1>Memory Matches</h1>
+			<img src="memory_matches.png" alt="Memory Matches">
+		</div>
+
+			<footer>
+				
+					<form action="" style="">
+					<label>
+					<div id="arrows">
+						<div class="arrow-up"></div>
+						<div class="arrow-down"></div>
+					</div>
+					
+					
+						<select name="selectlvl" id = "selectlvl">
+							<option value="lvl1"><span>Level One</span></option>
+							<option value="lvl2">Level Two</option>
+							<option value="lvl3">Level Three</option>
+							<option value="lvl4">Level Four</option>
+							<option value="lvl5">Level Five</option>
+							<option value="lvl6">Level Six</option>
+						</select>
+					</label>	
+					</form>
+					
+					<a href='#' id="startGameButton" onclick="showboard()">Start Game</a>
+
+				</div>
+				<div id = "start_button" class = "bottom_stuff">
+					
+				</div>
+			</footer>
+			<div id="success" class="">
+						<!--<img src="success.png" alt="Memory Matches">-->
+						<div id="wintext">
+						<h2>Success!</h2>
+						<p>You have found all of the matches in <span></span> turns.</p>
+						</div>
+			</div>
+			<div id="nomatch"><h3>Sorry, no match.</h3></div>
+			<div id="match"><h3>Match!</h3></div>
+	</article>
+</body>
+</html>
